@@ -1,0 +1,18 @@
+.App {
+	/* app container dimensions */
+	width: 100vw;
+	height: 100vh;
+
+	/* alignment */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/* appearance */
+	background: #25383c;
+
+	/* font */
+	text-align: center;
+
+	color: #dbe4ea;
+}

@@ -1,0 +1,60 @@
+@font-face {
+	font-family: 'Typo-Digit';
+	src: url('./assets/fonts/TypoDigitDemo-VG9lV.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.Display {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+
+	border: 0.15rem solid #3b383c;
+	color: black;
+	font-family: 'Typo-Digit', sans-serif;
+
+	border-radius: 10px;
+	box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.2),
+		inset 0px -4px 6px rgba(255, 255, 255, 0.1), 0px 4px 8px rgba(0, 0, 0, 0.1),
+		rgba(0, 0, 0, 0.11) 0px 0px 6px 0px inset,
+		rgba(255, 255, 255, 0.1) -2px -2px 5px 0px inset,
+		-1px 0 3px rgba(0, 0, 0, 0.5) inset;
+
+	border-left: 3px solid rgba(116, 132, 142, 0.5);
+	border-bottom: 3px solid rgba(116, 132, 142, 0.5);
+
+	/* margin: 1.25rem 0.5rem 0; */
+	background-color: #6f725c;
+	height: 5rem;
+	margin-top: 0.5rem;
+}
+
+.display-underlay {
+	z-index: 1;
+
+	height: auto;
+	opacity: 0.025;
+	font-weight: 100;
+	letter-spacing: 0px;
+}
+.display-overlay {
+	z-index: 2;
+	font-size: 5rem;
+	font-weight: 100;
+	letter-spacing: 0px;
+}
+
+.display-underlay,
+.display-overlay {
+	font-size: 4.5rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	position: absolute;
+	left: 0;
+	width: 98%;
+	height: auto;
+}
