@@ -17,7 +17,7 @@ function App() {
 				<div className="calculator-ref-container">
 					<img
 						className="calculator-ref-img"
-						src="/assets/calculator-reference-image.png"
+						src={`${import.meta.env.BASE_URL}/calculator-reference-image.png`}
 						alt="Calculator reference"
 					/>
 				</div>
