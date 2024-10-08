@@ -1,12 +1,12 @@
 .App {
 	/* app container dimensions */
-	width: 100vw;
-	height: 100vh;
 
 	/* alignment */
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 100vw;
+	flex-direction: column;
 
 	/* appearance */
 	background: #25383c;
@@ -15,4 +15,55 @@
 	text-align: center;
 
 	color: #dbe4ea;
+}
+
+.calculators-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	height: 42rem;
+
+	transition: gap 0.5s ease-in-out;
+
+	.calculator-ref-container {
+		padding: 2rem;
+		background-color: #1d2d30;
+		border-radius: 10px;
+
+		.calculator-ref-img {
+			display: inline-block;
+			min-width: 21rem;
+			min-height: 37rem;
+			margin: 0;
+			padding: 0;
+			border: none;
+			object-fit: contain;
+		}
+	}
+}
+
+.calculators-container.refImageRendered .Calculator {
+	transform: translateY(-10%); /* Moves the Calculator to the left smoothly */
+}
+
+.render-controller {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1.5rem;
+	button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		font-family: 'Helvetica', 'Arial', sans-serif;
+		color: #dbe4ea;
+
+		width: 15rem;
+		height: 3rem;
+		text-wrap: wrap;
+		background-color: #486c6d;
+	}
 }

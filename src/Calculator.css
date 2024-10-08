@@ -1,7 +1,11 @@
 .Calculator {
 	/* dimensions */
+	min-width: 21rem;
 	width: 21rem;
 	height: 37rem;
+	max-height: 37rem;
+	margin: 2rem;
+	position: relative;
 
 	/* spacing */
 	padding: 2.5rem 2.35rem;
