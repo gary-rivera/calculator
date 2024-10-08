@@ -22,15 +22,20 @@
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 
 	height: 42rem;
 
 	transition: gap 0.5s ease-in-out;
 
 	.calculator-ref-container {
+		position: absolute;
 		padding: 2rem;
 		background-color: #1d2d30;
 		border-radius: 10px;
+		opacity: 0;
+		transform: translateX(55%);
+		transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 
 		.calculator-ref-img {
 			display: inline-block;
@@ -45,7 +50,13 @@
 }
 
 .calculators-container.refImageRendered .Calculator {
-	transform: translateY(-10%); /* Moves the Calculator to the left smoothly */
+	transform: translateX(-55%); /* Moves the Calculator to the left smoothly */
+	transition: transform 0.5s ease-in-out;
+}
+.calculators-container.refImageRendered .calculator-ref-container {
+	transform: translateX(55%); /* Moves the Calculator to the left smoothly */
+	opacity: 1;
+	transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .render-controller {

@@ -24,7 +24,7 @@ function App() {
 			</div>
 			<div className="render-controller">
 				<button onClick={() => setRefImageRendered(!refImageRendered)}>
-					Render reference image
+					{`${refImageRendered ? 'Derender' : 'Render'}`} reference image
 				</button>
 			</div>
 		</div>
