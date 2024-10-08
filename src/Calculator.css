@@ -24,7 +24,7 @@
 	box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
 		rgba(0, 0, 0, 0.22) 0px 15px 12px;
 
-	transition: transform 0.5s ease-in-out; /* Smooth transition for the transform */
+	transition: transform 0.5s ease-in-out;
 }
 
 .Calculator::after {
@@ -40,6 +40,6 @@
 	border-left: 1px solid rgba(255, 255, 255, 0.35);
 
 	/* border-right: 2px solid black; */
-	border-radius: 35px 35px; /* Apply rounded corners to match the top of the container */
+	border-radius: 35px 35px;
 	box-sizing: border-box;
 }
