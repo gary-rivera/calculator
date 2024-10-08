@@ -1,5 +1,4 @@
-
-# Image Mockup Portfolio
+# Calculator Mockup
 a front-end only project built to showcase mockup skills
 
 ## What’s Inside?
