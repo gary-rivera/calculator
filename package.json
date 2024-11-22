@@ -13,6 +13,7 @@
 	"dependencies": {
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
+		"ruio": "^0.9.1",
 		"uuid": "^10.0.0"
 	},
 	"devDependencies": {
