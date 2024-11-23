@@ -6,6 +6,11 @@ function Operator({
 	setAlgorithm,
 }) {
 	function handleClick() {
+		if (operator === '=') {
+			calculateTotal();
+			return;
+		}
+
 		const previousEl = algorithm[algorithm.length - 1];
 
 		// 	if verify previous click was also an operator, replace it with current operator

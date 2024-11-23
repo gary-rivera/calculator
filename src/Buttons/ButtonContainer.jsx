@@ -14,6 +14,7 @@ const buttonLayout = [
 function ButtonContainer({
 	algorithm,
 	setAlgorithm,
+	calculateTotal,
 }) {
 	return (
 		<div className="ButtonContainer">
@@ -26,6 +27,7 @@ function ButtonContainer({
 						key={uniqueId}
 						algorithm={algorithm}
 						setAlgorithm={setAlgorithm}
+						calculateTotal={calculateTotal}
 					/>
 				);
 			})}
