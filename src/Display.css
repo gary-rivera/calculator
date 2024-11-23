@@ -33,17 +33,10 @@
 
 .display-underlay {
 	z-index: 1;
-
-	height: auto;
-	opacity: 0.025;
-	font-weight: 100;
-	letter-spacing: 0px;
+	opacity: 0.03;
 }
 .display-overlay {
 	z-index: 2;
-	font-size: 5rem;
-	font-weight: 100;
-	letter-spacing: 0px;
 }
 
 .display-underlay,
@@ -54,8 +47,14 @@
 	align-items: center;
 	justify-content: end;
 	position: absolute;
-	left: 0;
-	width: 98%;
+	right: 0;
 	height: auto;
-	overflow: hidden;
+	text-align: right;
+	margin: 0 5px;
+	font-size: 4.5rem;
+
+	span {
+		margin: 0px;
+		width: auto;
+	}
 }
