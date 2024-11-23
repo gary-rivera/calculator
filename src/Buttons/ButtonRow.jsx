@@ -1,10 +1,18 @@
 import { v4 as uuidv4 } from 'uuid';
-import Operator, { OPERATORS } from './Operator.jsx';
+import Operator from './Operator.jsx';
 import Operand from './Operand.jsx';
+import { MATHEMATICAL_OPERATORS } from '../constants/math';
 
-function ButtonRow({ row, total, setTotal }) {
+function ButtonRow({
+	row,
+	total,
+	algorithm,
+	setAlgorithm,
+	calculateTotal,
+	handleAllClear,
+}) {
 	function isOperator(button) {
-		return OPERATORS.includes(button);
+		return MATHEMATICAL_OPERATORS.includes(button);
 	}
 
 	return (
@@ -22,17 +30,20 @@ function ButtonRow({ row, total, setTotal }) {
 					const uId = uuidv4();
 					return isOperator(button) ? (
 						<Operator
-							total={total}
-							setTotal={setTotal}
 							operator={button}
 							key={uId}
+							total={total}
+							algorithm={algorithm}
+							setAlgorithm={setAlgorithm}
+							calculateTotal={calculateTotal}
+							handleAllClear={handleAllClear}
 						/>
 					) : (
 						<Operand
-							total={total}
-							setTotal={setTotal}
 							operand={button}
 							key={uId}
+							algorithm={algorithm}
+							setAlgorithm={setAlgorithm}
 						/>
 					);
 				})}

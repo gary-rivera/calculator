@@ -1,8 +1,8 @@
 import './Operand.css';
 
-function Operand({ total, setTotal, operand }) {
+function Operand({ operand, algorithm, setAlgorithm }) {
 	function handleClick() {
-		setTotal(total);
+		setAlgorithm([...algorithm, operand]);
 	}
 
 	return (

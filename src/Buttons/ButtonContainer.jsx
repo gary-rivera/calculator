@@ -1,6 +1,4 @@
 import './ButtonContainer.css';
-import Operand from './Operand.jsx';
-import Operator, { OPERATORS } from './Operator.jsx';
 import ButtonRow from './ButtonRow.jsx';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -13,26 +11,32 @@ const buttonLayout = [
 	['.', '0', '=', '*'],
 ];
 
-function ButtonContainer(total, setTotal) {
+function ButtonContainer({
+	total,
+	algorithm,
+	setAlgorithm,
+	calculateTotal,
+	handleAllClear,
+}) {
 	return (
 		<div className="ButtonContainer">
 			{buttonLayout.map((row) => {
 				const uniqueId = uuidv4();
-				return <ButtonRow row={row} id={uniqueId} key={uniqueId} />;
+				return (
+					<ButtonRow
+						row={row}
+						id={uniqueId}
+						key={uniqueId}
+						total={total}
+						algorithm={algorithm}
+						setAlgorithm={setAlgorithm}
+						calculateTotal={calculateTotal}
+						handleAllClear={handleAllClear}
+					/>
+				);
 			})}
 		</div>
 	);
 }
 
 export default ButtonContainer;
-
-function generateRandomId() {
-	const alphabet =
-		'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-	let id = '';
-	for (let i = 0; i < 6; i++) {
-		const index = Math.floor(Math.random() * alphabet.length);
-		id += alphabet[index];
-	}
-	return id.toString();
-}

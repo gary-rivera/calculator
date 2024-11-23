@@ -1,10 +1,32 @@
+import { useState, useEffect } from 'react';
 import './Display.css';
 
-function Display({ total }) {
+const BgUnderlay = () => (
+	<div className="display-underlay">
+		{['8', '8', '8', '8', '8', '8', '8', '8'].map((el, i) => (
+			<span key={i}>{el}</span>
+		))}
+	</div>
+);
+function Display({ total, algorithm }) {
+	const [displayText, setDisplayText] = useState(total);
+
+	useEffect(() => {
+		console.log('Display', { total, algorithm });
+		if (algorithm.length) setDisplayText(algorithm.join(' '));
+		else setDisplayText(total);
+	}, [total, algorithm]);
+
 	return (
 		<div className="Display">
-			<div className="display-underlay">888888888</div>
-			<div className="display-overlay">0</div>
+			<BgUnderlay />
+			<div className="display-overlay">
+				{displayText.length ? (
+					displayText.split('').map((el, i) => <span key={i}>{el || 0}</span>)
+				) : (
+					<span>0</span>
+				)}
+			</div>
 		</div>
 	);
 }
