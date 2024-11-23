@@ -4,8 +4,14 @@ function Operator({
 	operator,
 	algorithm,
 	setAlgorithm,
+	calculateTotal,
+	handleAllClear,
 }) {
 	function handleClick() {
+		if (operator === 'AC') {
+			handleAllClear();
+			return;
+		}
 		if (operator === '=') {
 			calculateTotal();
 			return;

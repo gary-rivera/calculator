@@ -8,6 +8,7 @@ function ButtonRow({
 	algorithm,
 	setAlgorithm,
 	calculateTotal,
+	handleAllClear,
 }) {
 	function isOperator(button) {
 		return MATHEMATICAL_OPERATORS.includes(button);
@@ -33,6 +34,7 @@ function ButtonRow({
 							algorithm={algorithm}
 							setAlgorithm={setAlgorithm}
 							calculateTotal={calculateTotal}
+							handleAllClear={handleAllClear}
 						/>
 					) : (
 						<Operand

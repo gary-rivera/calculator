@@ -52,9 +52,13 @@ function Calculator() {
 		return result;
 	};
 
+	const handleAllClear = () => {
+		setTotal(0);
+		setAlgorithm([]);
+	};
+
 	return (
 		<div className="Calculator">
-			<Display total={total} />
 			<Display total={total} algorithm={algorithm} />
 			<PanelSpacer />
 			<ButtonContainer
@@ -63,6 +67,7 @@ function Calculator() {
 				algorithm={algorithm}
 				setAlgorithm={setAlgorithm}
 				calculateTotal={calculateTotal}
+				handleAllClear={handleAllClear}
 			/>
 		</div>
 	);

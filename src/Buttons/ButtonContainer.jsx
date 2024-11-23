@@ -15,6 +15,7 @@ function ButtonContainer({
 	algorithm,
 	setAlgorithm,
 	calculateTotal,
+	handleAllClear,
 }) {
 	return (
 		<div className="ButtonContainer">
@@ -28,6 +29,7 @@ function ButtonContainer({
 						algorithm={algorithm}
 						setAlgorithm={setAlgorithm}
 						calculateTotal={calculateTotal}
+						handleAllClear={handleAllClear}
 					/>
 				);
 			})}
