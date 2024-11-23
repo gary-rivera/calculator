@@ -53,6 +53,9 @@ function Calculator() {
 			result,
 		});
 		result = result.toString();
+		if (result.length > 8) {
+			result = 'Err';
+		}
 		setTotal(result);
 		setAlgorithm([result]);
 		return result;
