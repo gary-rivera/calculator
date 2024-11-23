@@ -16,13 +16,13 @@ function Calculator() {
 		let number2 = '';
 
 		algorithm.forEach((el, i) => {
-			const isOperand = MATHEMATICAL_OPERANDS.includes(el);
+			const isValidNum = !isNaN(typeof el === 'number' ? el : parseFloat(el));
 
-			if (i === 0 && !isOperand) return; // TODO: throw error toast?
-			else if (isOperand && !operation.length) {
+			if (i === 0 && !isValidNum) return; // TODO: throw error toast?
+			else if (isValidNum && !operation.length) {
 				// build number1
 				number1 += el;
-			} else if (isOperand && operation.length) {
+			} else if (isValidNum && operation.length) {
 				// build number2
 				number2 += el;
 			} else {
@@ -46,9 +46,15 @@ function Calculator() {
 			default:
 				break;
 		}
-
+		console.log('[Calculator][calculateTotal]', {
+			number1,
+			operation,
+			number2,
+			result,
+		});
+		result = result.toString();
 		setTotal(result);
-		setAlgorithm([]);
+		setAlgorithm([result]);
 		return result;
 	};
 

@@ -5,6 +5,7 @@ import { MATHEMATICAL_OPERATORS } from '../constants/math';
 
 function ButtonRow({
 	row,
+	total,
 	algorithm,
 	setAlgorithm,
 	calculateTotal,
@@ -31,6 +32,7 @@ function ButtonRow({
 						<Operator
 							operator={button}
 							key={uId}
+							total={total}
 							algorithm={algorithm}
 							setAlgorithm={setAlgorithm}
 							calculateTotal={calculateTotal}

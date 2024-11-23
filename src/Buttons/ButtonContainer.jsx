@@ -12,6 +12,7 @@ const buttonLayout = [
 ];
 
 function ButtonContainer({
+	total,
 	algorithm,
 	setAlgorithm,
 	calculateTotal,
@@ -26,6 +27,7 @@ function ButtonContainer({
 						row={row}
 						id={uniqueId}
 						key={uniqueId}
+						total={total}
 						algorithm={algorithm}
 						setAlgorithm={setAlgorithm}
 						calculateTotal={calculateTotal}

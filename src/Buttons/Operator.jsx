@@ -2,6 +2,7 @@ import { MATHEMATICAL_OPERATORS } from '../constants/math';
 
 function Operator({
 	operator,
+	total,
 	algorithm,
 	setAlgorithm,
 	calculateTotal,
@@ -12,6 +13,10 @@ function Operator({
 			handleAllClear();
 			return;
 		}
+
+		// continue to build of total if it prev calculated
+		if (total) setAlgorithm([total, operator]);
+
 		if (operator === '=') {
 			calculateTotal();
 			return;
