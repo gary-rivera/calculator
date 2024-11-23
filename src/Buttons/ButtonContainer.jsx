@@ -1,6 +1,4 @@
 import './ButtonContainer.css';
-import Operand from './Operand.jsx';
-import Operator, { OPERATORS } from './Operator.jsx';
 import ButtonRow from './ButtonRow.jsx';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -25,14 +23,3 @@ function ButtonContainer(total, setTotal) {
 }
 
 export default ButtonContainer;
-
-function generateRandomId() {
-	const alphabet =
-		'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-	let id = '';
-	for (let i = 0; i < 6; i++) {
-		const index = Math.floor(Math.random() * alphabet.length);
-		id += alphabet[index];
-	}
-	return id.toString();
-}
