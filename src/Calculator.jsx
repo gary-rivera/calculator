@@ -7,12 +7,19 @@ import { MATHEMATICAL_OPERANDS } from './constants/math.js';
 
 function Calculator() {
 	const [total, setTotal] = useState(0);
+	const [algorithm, setAlgorithm] = useState([]);
 
 	return (
 		<div className="Calculator">
 			<Display total={total} />
+			<Display total={total} algorithm={algorithm} />
 			<PanelSpacer />
-			<ButtonContainer total={total} setTotal={setTotal} />
+			<ButtonContainer
+				total={total}
+				setTotal={setTotal}
+				algorithm={algorithm}
+				setAlgorithm={setAlgorithm}
+			/>
 		</div>
 	);
 }

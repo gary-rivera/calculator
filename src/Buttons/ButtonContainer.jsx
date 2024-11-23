@@ -11,12 +11,23 @@ const buttonLayout = [
 	['.', '0', '=', '*'],
 ];
 
-function ButtonContainer(total, setTotal) {
+function ButtonContainer({
+	algorithm,
+	setAlgorithm,
+}) {
 	return (
 		<div className="ButtonContainer">
 			{buttonLayout.map((row) => {
 				const uniqueId = uuidv4();
-				return <ButtonRow row={row} id={uniqueId} key={uniqueId} />;
+				return (
+					<ButtonRow
+						row={row}
+						id={uniqueId}
+						key={uniqueId}
+						algorithm={algorithm}
+						setAlgorithm={setAlgorithm}
+					/>
+				);
 			})}
 		</div>
 	);
