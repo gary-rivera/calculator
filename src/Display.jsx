@@ -12,8 +12,7 @@ function Display({ total, algorithm }) {
 	const [displayText, setDisplayText] = useState(total);
 
 	useEffect(() => {
-		console.log('Display', { total, algorithm });
-		if (algorithm.length) setDisplayText(algorithm.join(' '));
+		if (algorithm.length) setDisplayText(algorithm.join(''));
 		else setDisplayText(total);
 	}, [total, algorithm]);
 
