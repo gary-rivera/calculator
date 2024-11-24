@@ -46,12 +46,7 @@ function Calculator() {
 			default:
 				break;
 		}
-		console.log('[Calculator][calculateTotal]', {
-			number1,
-			operation,
-			number2,
-			result,
-		});
+
 		result = result.toString();
 		if (result.length > 8) {
 			result = 'Err';

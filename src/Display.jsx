@@ -21,7 +21,15 @@ function Display({ total, algorithm }) {
 			<BgUnderlay />
 			<div className="display-overlay">
 				{displayText.length ? (
-					displayText.split('').map((el, i) => <span key={i}>{el || 0}</span>)
+					displayText.split('').map((el, i) => {
+						if (['+', '-', '*', '/'].includes(el)) {
+							return (
+								<span key={i} className="operator">
+									{el}
+								</span>
+							);
+						} else return <span key={i}>{el || 0}</span>;
+					})
 				) : (
 					<span>0</span>
 				)}

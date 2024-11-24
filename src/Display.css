@@ -1,6 +1,6 @@
 @font-face {
-	font-family: 'Typo-Digit';
-	src: url('./assets/fonts/TypoDigitDemo-VG9lV.ttf') format('truetype');
+	font-family: 'Technology-Italic';
+	src: url('./assets/fonts/Technology-Italic.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -10,10 +10,10 @@
 	justify-content: center;
 	align-items: center;
 	position: relative;
-
 	border: 0.15rem solid #3b383c;
 	color: black;
-	font-family: 'Typo-Digit', sans-serif;
+	font-family: 'Technology-Italic', sans-serif;
+	overflow-y: hidden;
 
 	border-radius: 10px;
 	box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.2),
@@ -37,6 +37,9 @@
 }
 .display-overlay {
 	z-index: 2;
+	span.operator {
+		font-size: 44px;
+	}
 }
 
 .display-underlay,
@@ -45,17 +48,20 @@
 	font-size: 4.5rem;
 
 	display: flex;
-	align-items: center;
+	align-items: flex-end;
 	justify-content: end;
 	position: absolute;
 	right: 0;
 	height: auto;
 	text-align: right;
 	margin: 0 5px;
-	font-size: 4.5rem;
+	font-size: 4.25rem;
+
+	padding-right: 5px;
 
 	span {
 		margin: 0px;
 		min-width: 30px;
+		height: 55px;
 	}
 }
